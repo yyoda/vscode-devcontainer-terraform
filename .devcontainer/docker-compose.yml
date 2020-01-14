@@ -1,0 +1,11 @@
+version: '3'
+services:
+  terraform:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ../:/workspace
+      - ~/.aws:/root/.aws
+      - ~/.gitconfig:/root/.gitconfig
+    command: sleep infinity

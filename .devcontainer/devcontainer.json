@@ -1,0 +1,13 @@
+{
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"service": "terraform",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"extensions": [
+		"mauve.terraform"
+	],
+	// adjust ssh key files permission.
+	"postCreateCommand": "mkdir -p /root/.ssh && cp -r /root/.ssh-localhost/* /root/.ssh && chmod 700 /root/.ssh && chmod 600 /root/.ssh/*"
+}
